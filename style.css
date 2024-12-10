@@ -74,24 +74,5 @@ body {
 .header{
     background-color:#d5edfd;
 }
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(/PicturesGrafismo/Grafismos/Grafismos\ Sem\ Fundo\ \(2\).png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 0;
 
-}
-.header p {
-    position: relative; /* Mantém o texto acima do pseudo-elemento */
-    z-index: 1; /* Certifica-se de que o texto fique na frente */
-    color: #1aa8fa; /* Ajuste da cor do texto */
-}
 
