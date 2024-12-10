@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'amandine-regular';
+    src: url('./fonts/amandine-regular.otf') format('woff2'),
+         url('./fonts/amandine-regular.otf') format('woff'),
+         url('./fonts/amandine-regular.otf') format('truetype');
+  }
+  
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: amandine-regular;
 }
 
 .navbar{
