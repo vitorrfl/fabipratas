@@ -1,5 +1,3 @@
 # fabipratas
 
-Dont use branch main
-
-Branch DEVELOPMENT running
+! Dont use branch main
