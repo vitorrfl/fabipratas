@@ -1,5 +1,21 @@
 @font-face {
     font-family: 'amandine-regular';
+
+src:    url('./fonts/amandine-regular.otf') format('woff2'),
+        url('./fonts/amandine-regular.otf') format('woff'),
+        url('./fonts/amandine-regular.otf') format('truetype');
+}
+
+
+:root {
+    --var-color-primary: #ddf2ff;
+    --var-color-secondary: #121212;
+    --var-color-tertiary:#ffeccf;
+    --var-color-quaternary: #ffffff;
+    --var-color-quinternary: #89d1ff;
+
+}
+
     src: url('./fonts/amandine-regular.otf') format('woff2'),
          url('./fonts/amandine-regular.otf') format('woff'),
          url('./fonts/amandine-regular.otf') format('truetype');
@@ -15,8 +31,8 @@
 
 .navbar{
     display: flex;
-   align-items: center;
-   padding: 0; 
+    align-items: center;
+    padding: 0; 
 }
 
 nav{
@@ -50,6 +66,39 @@ body {
     padding-left: 25px;
     padding-right: 25px;
 }
+
+/* slider*/
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+figure {
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide h1 {
+    position: relative;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--var-color-secondary);
+    text-shadow: 1px 1px 2px var(--var-color-quinternary);
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
 .row{
     display: flex;
     align-items: center;
@@ -59,7 +108,7 @@ body {
 }
 .col-2{
     flex-basis: 50%;
-    min-width: 300px;
+    min-width: 600px;
 }
 .col-2 img{
     max-width: 100%;
