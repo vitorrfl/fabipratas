@@ -141,60 +141,40 @@ body {
 /* css carouseldo vitu*/
 .carousel {
     display: flex;
+    align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
-
-
-.slider {
-    position: relative;
-    width: 100%;
-    height: 500px;
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
     overflow: hidden;
+}
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background-color: var(--var-color-quaternary);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 0 4px 0.1px gray;
+    transition: 0.2s ease;
+}
+.card-list .card-item .card-link:hover {
+    border-color:var(--var-color-quinternary) ;
+}
+.card-list .card-item .card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
     border-radius: 10px;
 }
-
-.slides {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(0); /* Posição inicial */
+.card-list .card-item .card-tittle {
+    font-size: 1.19em;
+    color: var(--var-color-secondary);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
 }
-
-.slide {
-    min-width: 100%; /* Cada slide ocupa toda a largura */
-    opacity: 0; /* Oculta todos os slides */
-    transition: opacity 0.5s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1; /* Exibe o slide ativo */
-}
-
-  /* Botões de navegação */
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color:var(--var-color-secondary);
-    color: var(--var-color-quaternary);
-    border: none;
-    opacity: 40%;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10%;
-    z-index: 1;
-    transition: background 0.5s;
-  }
-  
-  button.prev {
-    left: 15px;
-    font-size: 50px;
-  }
-  
-  button.next {
-    right: 15px;
-    font-size: 50px;
-  }
-  
-  button:hover {
-    background:#3bb6fd;
-  }

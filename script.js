@@ -1,29 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide"); // Seleciona todos os slides
-  const nextButton = document.querySelector(".next");
-  const prevButton = document.querySelector(".prev");
+new Swiper('.card-wrapper', {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 30,
 
-  let currentIndex = 0; // Slide ativo inicialmente
+  // pagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
 
-  // Atualiza a classe "active" no slide atual
-  const updateActiveSlide = () => {
-    slides.forEach((slide, index) => {
-      slide.classList.toggle("active", index === currentIndex);
-    });
-  };
-
-  // Botão "Next" (Avançar)
-  nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % slides.length; // Avança e reinicia no final
-    updateActiveSlide();
-  });
-
-  // Botão "Prev" (Voltar)
-  prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Volta e reinicia no início
-    updateActiveSlide();
-  });
-
-  // Chamada inicial para mostrar o slide ativo
-  updateActiveSlide();
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  //responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
+  }
 });
