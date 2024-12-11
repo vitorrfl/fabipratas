@@ -5,6 +5,14 @@
          url('./fonts/amandine-regular.otf') format('truetype');
   }
 
+:root {
+    --var-color-primary: #ddf2ff;
+    --var-color-secondary: #121212;
+    --var-color-tertiary:#ffeccf;
+    --var-color-quaternary: #ffffff;
+    --var-color-quinternary: #89d1ff;
+
+}
 
 *{
     margin: 0;
@@ -130,7 +138,43 @@ body {
     padding-left: 25px;
     padding-right: 25px;
 }
-
-
-
-
+/* css carouseldo vitu*/
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background-color: var(--var-color-quaternary);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 0 4px 0.1px gray;
+    transition: 0.2s ease;
+}
+.card-list .card-item .card-link:hover {
+    border-color:var(--var-color-quinternary) ;
+}
+.card-list .card-item .card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-list .card-item .card-tittle {
+    font-size: 1.19em;
+    color: var(--var-color-secondary);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
+}
