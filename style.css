@@ -5,6 +5,14 @@
          url('./fonts/amandine-regular.otf') format('truetype');
   }
 
+:root {
+    --var-color-primary: #ddf2ff;
+    --var-color-secondary: #121212;
+    --var-color-tertiary:#ffeccf;
+    --var-color-quaternary: #ffffff;
+    --var-color-quinternary: #89d1ff;
+
+}
 
 *{
     margin: 0;
@@ -130,7 +138,63 @@ body {
     padding-left: 25px;
     padding-right: 25px;
 }
+/* css carouseldo vitu*/
+.carousel {
+    display: flex;
+    justify-content: center;
+}
 
 
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0); /* Posição inicial */
+}
 
+.slide {
+    min-width: 100%; /* Cada slide ocupa toda a largura */
+    opacity: 0; /* Oculta todos os slides */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1; /* Exibe o slide ativo */
+}
+
+  /* Botões de navegação */
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:var(--var-color-secondary);
+    color: var(--var-color-quaternary);
+    border: none;
+    opacity: 40%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10%;
+    z-index: 1;
+    transition: background 0.5s;
+  }
+  
+  button.prev {
+    left: 15px;
+    font-size: 50px;
+  }
+  
+  button.next {
+    right: 15px;
+    font-size: 50px;
+  }
+  
+  button:hover {
+    background:#3bb6fd;
+  }
