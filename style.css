@@ -6,9 +6,9 @@
   }
 
 :root {
-    --var-color-primary: #ddf2ff;
-    --var-color-secondary: #121212;
-    --var-color-tertiary:#ffeccf;
+    --var-color-primary: #121212;
+    --var-color-secondary: #151515;
+    --var-color-tertiary: #ddf2ff;
     --var-color-quaternary: #ffffff;
     --var-color-quinternary: #89d1ff;
 
@@ -19,20 +19,29 @@
     padding: 0;
     box-sizing: border-box;
     font-family: amandine-regular;
+    color: var(--var-color-quaternary);
+}
+body {
+    background-color:var(--var-color-primary);
 }
 
 .navbar{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 0; 
+    background-color:var(--var-color-secondary);
+    box-shadow: var(--var-color-quaternary) 0 0px 1px 0 ;
 }
 
+
 nav{
-    flex: 1;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
+
 nav ul{
-    display: inline-block;
+    display: none;
     list-style-type: none;
 }
 nav ul li{
@@ -45,13 +54,9 @@ a{
     color: #000000;
 }
 
-p{
-    color: #3bb6fd;
-}
 
-body {
-    background-color: rgb(255, 255, 255);
-}
+
+
 .container{
     max-width: 1300px;
     margin: auto;
@@ -62,8 +67,9 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-
+    justify-content: center;
+    padding: 30px;
+    margin: 20px;
 }
 .col-2{
     flex-basis: 50%;
@@ -71,12 +77,11 @@ body {
 }
 .col-2 img{
     max-width: 100%;
-    padding: 50px 0;
     height: auto;
-    padding: 20px;
+    margin: 30px;
 }
 .col-2 h1{
-    font-size: 60px;
+    font-size: 40px;
     line-height: 60px;
     margin: 25px 0;
     margin-bottom: 2px;
@@ -84,8 +89,7 @@ body {
 }
 .row .col-2 p {
     font-size: 23px; 
-    line-height: 28px; 
-    color: #000000; 
+    line-height: 28px;  
     margin-top: 32px;
     font-family: Lora-Variable;
 }
@@ -93,17 +97,18 @@ body {
 .row .col-2 .btn {
     margin-top: 70px; /* Adiciona um espaço acima do botão */
     display: inline-block; /* Mantém o botão como bloco inline */
+    color: var(--var-color-quaternary);
 }
 
 .btn{
     display: inline-block;
-    background: #000000;
-    color: #fff;
-    padding:  8px 30px;
+    background:transparent ;
+    padding:  8px 15px;
     margin: 30px 0;
-    border-radius: 30px;
-    transition: background 0.5s;
-    
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--var-color-quinternary) 0 0 5px 0.2px;
+    transition: all 0.5s;
 }
 
 .btn:hover{
@@ -112,7 +117,7 @@ body {
 
 
 .header{
-    background-color:#d5edfd;
+    background-image: url(PicturesGrafismo/Grafismos/Grafismos\ Sem\ Fundo\ \(1\).png);
 }
 
 .header .row{
